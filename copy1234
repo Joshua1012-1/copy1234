@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>복사 중...</title>
+  <script>
+    function copyAndClose() {
+      const text = "카카오뱅크 3333-19-9026452";
+      navigator.clipboard.writeText(text).then(() => {
+        // 복사 성공 시 자동 닫기
+        window.close();
+      }).catch(err => {
+        alert("복사에 실패했습니다. 다시 시도해주세요.");
+        console.error(err);
+      });
+    }
+  </script>
+</head>
+<body onload="copyAndClose()">
+  <p>복사 중입니다...</p>
+</body>
+</html>
